@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
+import styles from './styles';
+
 interface Props {
     description: string;
 };
@@ -8,11 +10,7 @@ interface Props {
 export default function PostItem(props: Props) {
 
     return (
-        <View style={{
-            marginVertical: 5, paddingHorizontal: 10,
-            borderBottomWidth: 1, borderColor: 'gray',
-            paddingBottom: 10,
-        }}>
+        <View style={styles.item}>
             <Text style={{ fontSize: 18 }}>{ props.description }</Text>
         </View>
     );

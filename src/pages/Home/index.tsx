@@ -35,6 +35,7 @@ export default function HomePage() {
     return (
         <FlatList
             data={posts}
+            style={styles.list}
             keyExtractor={item => item.id}
             renderItem={elem => <PostItem description={elem.item.description} />}
         />
